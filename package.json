@@ -24,5 +24,14 @@
     "http-server": "^14.1.1",
     "uglify-js": "^3.17.4"
   },
-  "homepage": "https://yourusername.github.io/craftvile-police-rp"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilsonRIP/craftvile-police-rp.git"
+  },
+  "homepage": "https://wilsonrip.github.io/craftvile-police-rp",
+  "bugs": {
+    "url": "https://github.com/WilsonRIP/craftvile-police-rp/issues"
+  },
+  "author": "WilsonRIP",
+  "license": "MIT"
 }
