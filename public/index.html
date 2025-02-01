@@ -3,16 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to CraftVile Police RP - The ultimate police roleplay experience in Garry's Mod">
     <title>CraftVile Police RP</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to CraftVile Police RP</h1>
-    <nav>
-        <a href="/community.html">Community</a>
-        <a href="/updates.html">Updates</a>
-        <a href="/store.html">Store</a>
-        <a href="/faq.html">FAQ</a>
-    </nav>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo.svg" alt="CraftVile Logo">
+                CraftVile Police RP
+            </a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/community.html">Community</a>
+                <a href="/updates.html">Updates</a>
+                <a href="/store.html">Store</a>
+                <a href="/faq.html">FAQ</a>
+                <div class="auth-status">
+                    <!-- Will be populated by auth.js -->
+                </div>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animate-slide-up">Welcome to CraftVile Police RP</h1>
+                <p class="animate-slide-up">Experience the most immersive police roleplay server in Garry's Mod</p>
+                <div class="hero-buttons animate-slide-up">
+                    <a href="/community.html" class="btn btn-primary">Join Community</a>
+                    <a href="#features" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image animate-fade-in">
+                <img src="/assets/hero-image.svg" alt="Police Roleplay Scene" loading="lazy">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Why Choose CraftVile?</h2>
+            <div class="features-grid">
+                <div class="feature-card card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Professional Roleplay</h3>
+                    <p>Experience realistic police work with our dedicated roleplay community</p>
+                </div>
+                <div class="feature-card card">
+                    <i class="fas fa-users"></i>
+                    <h3>Active Community</h3>
+                    <p>Join our growing community of passionate roleplayers</p>
+                </div>
+                <div class="feature-card card">
+                    <i class="fas fa-car"></i>
+                    <h3>Custom Vehicles</h3>
+                    <p>Drive unique and realistic police vehicles with custom features</p>
+                </div>
+                <div class="feature-card card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our staff team is always here to help you</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="departments">
+            <h2>Available Departments</h2>
+            <div class="departments-grid">
+                <div class="department-card card">
+                    <img src="/assets/departments/pd.svg" alt="Police Department" loading="lazy">
+                    <h3>Police Department</h3>
+                    <p>Patrol the streets and maintain law and order</p>
+                </div>
+                <div class="department-card card">
+                    <img src="/assets/departments/swat.svg" alt="SWAT Team" loading="lazy">
+                    <h3>SWAT Team</h3>
+                    <p>Handle high-risk situations and special operations</p>
+                </div>
+                <div class="department-card card">
+                    <img src="/assets/departments/detective.svg" alt="Detective Division" loading="lazy">
+                    <h3>Detective Division</h3>
+                    <p>Investigate crimes and solve complex cases</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Join?</h2>
+                <p>Start your journey in law enforcement today!</p>
+                <div class="cta-buttons">
+                    <a href="steam://connect/server-ip" class="btn btn-primary">
+                        <i class="fab fa-steam"></i>
+                        Connect to Server
+                    </a>
+                    <a href="/store.html" class="btn btn-secondary">
+                        <i class="fas fa-shopping-cart"></i>
+                        View Store
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="/community.html">Community</a>
+                <a href="/updates.html">Updates</a>
+                <a href="/store.html">Store</a>
+                <a href="/faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-discord"></i>
+                        <span class="visually-hidden">Discord</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-steam"></i>
+                        <span class="visually-hidden">Steam</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener">
+                        <i class="fab fa-twitter"></i>
+                        <span class="visually-hidden">Twitter</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/rules.html">Server Rules</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftVile Police RP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/ui.js"></script>
+    <script src="/js/auth.js"></script>
 </body>
 </html> 

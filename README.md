@@ -1,79 +1,92 @@
-# CraftVile Police Roleplay Website
+# CraftVile Police RP Website
 
-A modern, responsive website for the CraftVile Police Roleplay Garry's Mod server. This website provides information about the server, application forms for various positions, and frequently asked questions.
+A modern, responsive website for the CraftVile Police Roleplay Garry's Mod server.
 
 ## Features
 
 - Modern, responsive design
-- Performance optimized
-- Application forms for police and staff positions
-- Comprehensive FAQ section
+- Dark/Light theme support
+- Steam authentication
+- Forum system
+- Store with Stripe integration
+- Staff application system
+- FAQ section
 - Mobile-friendly navigation
-- Accessibility features
-- Clean and professional UI
 
 ## Technologies Used
 
 - HTML5
 - CSS3 (with modern features and optimizations)
 - JavaScript (ES6+)
-- Google Fonts (Inter)
+- Node.js
+- MongoDB
+- Stripe API
+- Steam API
 
-## Performance Optimizations
-
-- Lazy loading images
-- Debounced event listeners
-- Optimized animations
-- Reduced motion support
-- Efficient DOM manipulation
-- Minified assets
-
-## Accessibility Features
-
-- ARIA attributes
-- Keyboard navigation
-- Screen reader friendly
-- Reduced motion support
-- High contrast text
-- Proper heading hierarchy
-
-## Setup Instructions
+## Local Development
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/craftvile-police-rp.git
 ```
 
-2. Navigate to the project directory:
+2. Install dependencies:
 ```bash
 cd craftvile-police-rp
+npm install
 ```
 
-3. Open the website:
-- For development: Use a local server (e.g., Live Server in VS Code)
-- For production: Deploy to your web hosting service
+3. Create a `.env` file in the root directory with your configuration:
+```env
+STEAM_API_KEY=your_steam_api_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
+STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+MONGODB_URI=your_mongodb_uri
+```
 
-## File Structure
+4. Start the development server:
+```bash
+npm start
+```
+
+The site will be available at `http://localhost:3000`
+
+## Building for Production
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. The optimized files will be in the `dist` directory.
+
+## Deployment to GitHub Pages
+
+1. Update the `homepage` field in `package.json` with your GitHub Pages URL:
+```json
+{
+  "homepage": "https://yourusername.github.io/craftvile-police-rp"
+}
+```
+
+2. Deploy to GitHub Pages:
+```bash
+npm run deploy
+```
+
+## Project Structure
 
 ```
 craftvile-police-rp/
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── index.html
-├── forms.html
-├── faq.html
+├── public/
+│   ├── assets/       # Images and SVG files
+│   ├── css/         # Stylesheets
+│   ├── js/          # JavaScript files
+│   └── index.html   # Main HTML file
+├── dist/            # Production build
+├── package.json
 └── README.md
 ```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
 
 ## Contributing
 

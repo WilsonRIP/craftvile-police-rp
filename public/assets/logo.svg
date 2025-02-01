@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Shield Background -->
+    <path d="M100 20 L180 60 L180 120 C180 160 100 180 100 180 C100 180 20 160 20 120 L20 60 Z" fill="#1a237e"/>
+    <path d="M100 30 L170 65 L170 115 C170 150 100 170 100 170 C100 170 30 150 30 115 L30 65 Z" fill="#3f51b5"/>
+    
+    <!-- Badge Star -->
+    <path d="M100 60 L110 90 L140 90 L115 110 L125 140 L100 120 L75 140 L85 110 L60 90 L90 90 Z" fill="#ffd700"/>
+    
+    <!-- CV Letters -->
+    <g transform="translate(100 100)">
+        <!-- C -->
+        <path d="M-20 -10 A20 20 0 0 1 -20 10" stroke="#ffd700" stroke-width="8" fill="none"/>
+        <!-- V -->
+        <path d="M0 -10 L10 10 L20 -10" stroke="#ffd700" stroke-width="8" fill="none"/>
+    </g>
+    
+    <!-- Police Text -->
+    <text x="100" y="150" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">POLICE RP</text>
+</svg> 
