@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Uniform Body -->
+    <path d="M100 100 L300 100 L350 400 L50 400 Z" fill="#1a237e"/>
+    
+    <!-- Collar -->
+    <path d="M100 100 L200 150 L300 100 L200 80 Z" fill="#0d47a1"/>
+    
+    <!-- Badge Placeholder -->
+    <circle cx="150" cy="150" r="30" fill="#ffd700"/>
+    
+    <!-- Buttons -->
+    <circle cx="200" cy="200" r="10" fill="#ffd700"/>
+    <circle cx="200" cy="250" r="10" fill="#ffd700"/>
+    <circle cx="200" cy="300" r="10" fill="#ffd700"/>
+    
+    <!-- Patches -->
+    <rect x="50" y="150" width="60" height="30" fill="#0d47a1"/>
+    <rect x="290" y="150" width="60" height="30" fill="#0d47a1"/>
+    
+    <!-- Text -->
+    <text x="200" y="450" font-family="Arial" font-size="24" fill="#1a237e" text-anchor="middle">POLICE UNIFORM</text>
+</svg> 

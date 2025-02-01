@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Badge Background -->
+    <circle cx="100" cy="100" r="90" fill="#1a237e"/>
+    <circle cx="100" cy="100" r="80" fill="#3f51b5"/>
+    
+    <!-- Badge Star -->
+    <path d="M100 40 L110 80 L150 80 L118 105 L130 145 L100 120 L70 145 L82 105 L50 80 L90 80 Z" fill="#ffd700"/>
+    
+    <!-- Badge Text -->
+    <text x="100" y="170" font-family="Arial" font-size="14" fill="white" text-anchor="middle">POLICE DEPARTMENT</text>
+    
+    <!-- Badge Number -->
+    <text x="100" y="95" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle" font-weight="bold">PD</text>
+</svg> 

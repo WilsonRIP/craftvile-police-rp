@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Badge Background -->
+    <circle cx="200" cy="200" r="180" fill="#ffd700"/>
+    <circle cx="200" cy="200" r="160" fill="#1a237e"/>
+    
+    <!-- Badge Star -->
+    <path d="M200 80 L220 160 L300 160 L235 210 L260 290 L200 240 L140 290 L165 210 L100 160 L180 160 Z" fill="#ffd700"/>
+    
+    <!-- Text -->
+    <text x="200" y="160" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle">CRAFTVILE</text>
+    <text x="200" y="260" font-family="Arial" font-size="24" fill="#ffd700" text-anchor="middle">POLICE</text>
+</svg> 
