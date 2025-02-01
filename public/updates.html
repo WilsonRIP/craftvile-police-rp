@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CraftVile Police Roleplay - Latest Updates">
+    <title>Updates - CraftVile Police RP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>CraftVile Police RP</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v12h12V9a6 6 0 0 0-6-6z"/></svg>
+                    <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/></svg>
+                </button>
+            </div>
+            <div class="auth-status">
+                <!-- This will be populated by auth.js -->
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Community</a></li>
+                <li><a href="/updates.html" class="active">Updates</a></li>
+                <li><a href="/store.html">Store</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="updates-container">
+        <div class="page-header">
+            <h2>Latest Updates</h2>
+            <p>Stay informed about the latest changes and announcements</p>
+        </div>
+
+        <div class="updates-filter">
+            <button class="filter-btn active" data-filter="all">All Updates</button>
+            <button class="filter-btn" data-filter="features">New Features</button>
+            <button class="filter-btn" data-filter="fixes">Bug Fixes</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <div class="updates-grid">
+            <!-- New Police Vehicles -->
+            <article class="update-card" data-category="features">
+                <div class="update-meta">
+                    <span class="update-date">February 15, 2024</span>
+                    <span class="update-tag">New Feature</span>
+                </div>
+                <h3>New Police Vehicles Added</h3>
+                <div class="update-content">
+                    <p>We're excited to announce the addition of several new police vehicles to our server:</p>
+                    <ul>
+                        <li>2024 Ford Explorer Police Interceptor</li>
+                        <li>2024 Dodge Charger Pursuit</li>
+                        <li>2024 Chevrolet Tahoe PPV</li>
+                        <li>Unmarked variants of all vehicles</li>
+                    </ul>
+                    <div class="update-image">
+                        <img src="/assets/updates/police-vehicles.jpg" alt="New Police Vehicles" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Performance Update -->
+            <article class="update-card" data-category="fixes">
+                <div class="update-meta">
+                    <span class="update-date">February 10, 2024</span>
+                    <span class="update-tag">Bug Fix</span>
+                </div>
+                <h3>Performance Improvements</h3>
+                <div class="update-content">
+                    <p>We've made several optimizations to improve server performance:</p>
+                    <ul>
+                        <li>Reduced server lag during high-traffic periods</li>
+                        <li>Fixed vehicle spawn system memory leak</li>
+                        <li>Optimized prop physics calculations</li>
+                        <li>Improved network synchronization</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Training Event -->
+            <article class="update-card" data-category="events">
+                <div class="update-meta">
+                    <span class="update-date">February 20, 2024</span>
+                    <span class="update-tag">Event</span>
+                </div>
+                <h3>Special Training Event</h3>
+                <div class="update-content">
+                    <p>Join us for a special police training event this weekend!</p>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> February 20, 2024</p>
+                        <p><strong>Time:</strong> 2:00 PM EST</p>
+                        <p><strong>Location:</strong> Police Academy</p>
+                        <p><strong>Training includes:</strong></p>
+                        <ul>
+                            <li>Vehicle pursuit techniques</li>
+                            <li>Tactical response scenarios</li>
+                            <li>Department procedures review</li>
+                        </ul>
+                    </div>
+                    <button class="rsvp-button">RSVP for Event</button>
+                </div>
+            </article>
+
+            <!-- New Features -->
+            <article class="update-card" data-category="features">
+                <div class="update-meta">
+                    <span class="update-date">February 5, 2024</span>
+                    <span class="update-tag">New Feature</span>
+                </div>
+                <h3>Enhanced Radio System</h3>
+                <div class="update-content">
+                    <p>We've completely revamped our police radio system with new features:</p>
+                    <ul>
+                        <li>Multiple radio channels for different departments</li>
+                        <li>Emergency broadcast system</li>
+                        <li>Improved audio quality</li>
+                        <li>Visual radio HUD</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn" disabled>&lt; Previous</button>
+            <span class="current-page">Page 1 of 1</span>
+            <button class="pagination-btn" disabled>Next &gt;</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CraftVile Police RP</h3>
+                <p>The ultimate police roleplay experience in Garry's Mod</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Community</a></li>
+                    <li><a href="/updates.html">Updates</a></li>
+                    <li><a href="/store.html">Store</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">Steam</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftVile Police RP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+</body>
+</html> 

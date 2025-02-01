@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CraftVile Police Roleplay - Community Forum">
+    <title>Community Forum - CraftVile Police RP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>CraftVile Police RP</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v12h12V9a6 6 0 0 0-6-6z"/></svg>
+                    <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/></svg>
+                </button>
+            </div>
+            <div class="auth-status">
+                <!-- This will be populated by auth.js -->
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Community</a></li>
+                <li><a href="/updates.html">Updates</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="forum-page">
+        <!-- New Post Modal -->
+        <div id="newPostModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Create New Post</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <form id="newPostForm" class="post-form">
+                    <div class="form-group">
+                        <label for="postTitle">Title</label>
+                        <input type="text" id="postTitle" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postCategory">Category</label>
+                        <select id="postCategory" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="announcements">Announcements</option>
+                            <option value="general">General Discussion</option>
+                            <option value="support">Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="postContent">Content</label>
+                        <textarea id="postContent" name="content" rows="6" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="emoji-picker-btn">
+                            <i class="far fa-smile"></i> Add Emoji
+                        </button>
+                        <button type="submit" class="submit-button">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="forum-header">
+            <div class="forum-stats">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span id="memberCount">Loading...</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-comments"></i>
+                    <span id="postCount">Loading...</span>
+                </div>
+            </div>
+            <div class="forum-actions">
+                <button class="new-post-btn" id="newPostBtn">
+                    <i class="fas fa-plus"></i> New Post
+                </button>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search posts...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-container">
+            <div id="forumPosts">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <template id="postTemplate">
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="post-author">
+                        <img src="" alt="" class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name"></span>
+                            <span class="author-role"></span>
+                        </div>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date"></span>
+                        <div class="post-actions">
+                            <button class="edit-post" title="Edit"><i class="fas fa-edit"></i></button>
+                            <button class="delete-post" title="Delete"><i class="fas fa-trash"></i></button>
+                            <button class="pin-post" title="Pin"><i class="fas fa-thumbtack"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3 class="post-title"></h3>
+                    <div class="post-text"></div>
+                </div>
+                <div class="post-footer">
+                    <div class="reactions">
+                        <button class="reaction-btn" data-emoji="👍">
+                            <span class="emoji">👍</span>
+                            <span class="count">0</span>
+                        </button>
+                        <button class="reaction-btn" data-emoji="❤️">
+                            <span class="emoji">❤️</span>
+                            <span class="count">0</span>
+                        </button>
+                        <button class="reaction-btn" data-emoji="😄">
+                            <span class="emoji">😄</span>
+                            <span class="count">0</span>
+                        </button>
+                        <button class="add-reaction">
+                            <i class="far fa-smile"></i>
+                        </button>
+                    </div>
+                    <div class="post-stats">
+                        <span class="views"><i class="fas fa-eye"></i> <span class="count">0</span></span>
+                        <span class="comments"><i class="fas fa-comment"></i> <span class="count">0</span></span>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <div class="comments-container"></div>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Add a comment..." required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </article>
+        </template>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CraftVile Police RP</h3>
+                <p>The ultimate police roleplay experience in Garry's Mod</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Community</a></li>
+                    <li><a href="/updates.html">Updates</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Discord</a>
+                    <a href="#" class="social-link">Steam</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftVile Police RP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/forum.js" defer></script>
+</body>
+</html> 
